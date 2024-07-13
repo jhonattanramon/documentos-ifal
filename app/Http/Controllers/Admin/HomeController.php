@@ -52,7 +52,7 @@ class HomeController extends Controller
     public $estadoId;
 
     public function index(Request $request)
-    {
+    { 
         try{
             $unidade = Unidade::find(auth()->user()->unidade_id);
             $this->unidadeId = $unidade->id;
@@ -257,7 +257,7 @@ class HomeController extends Controller
         
         }catch(\Exception $e){
             Log::warning('Home::index::Exception');
-            $messageError = $e->getMessage()."::".$e->getLine();
+            $messageError = $e;
 
 
             /*

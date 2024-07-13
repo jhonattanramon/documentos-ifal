@@ -1,6 +1,7 @@
 <?php
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
+
 use Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
@@ -20,8 +21,8 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'Normativas',
-            'email' => 'normativas@nees.com.br',
+            'name' => 'Reitoria',
+            'email' => 'Reitoria@ifal.com.br',
             'tipo' => 'admin',
             'password' => bcrypt('123456')
         ]);

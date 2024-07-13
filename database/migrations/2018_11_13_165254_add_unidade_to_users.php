@@ -26,8 +26,8 @@ class AddUnidadeToUsers extends Migration
      */
     public function down()
     {
-        Schema::table('users', function($table) {
-            $table->dropColumn('unidade_id');
-        });
+        // Schema::table('users', function($table) {
+        //     $table->dropColumn('unidade_id');
+        // });
     }
 }

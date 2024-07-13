@@ -1,8 +1,10 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
+
 use App\Models\Unidade;
-use App\User;
+use Illuminate\Support\Facades\DB;
+
 
 class UnidadeDefaultTableSeeder extends Seeder
 {
@@ -15,14 +17,14 @@ class UnidadeDefaultTableSeeder extends Seeder
     {
         DB::table('unidades')->delete();
         $unidadeAdmin = Unidade::create([
-            'nome' => 'Conselho Normativas', 
-            'tipo' => 'Conselho', 
+            'nome' => 'Reitoria IFAL', 
+            'tipo' => 'Reitoria', 
             'esfera' => 'Estadual',
             'admin' => true,
-            'email' => 'cfnormativas@normativas.com.br',
-            'url' => 'http://normativas.nees.com.br',
-            'sigla' => 'NBR',
-            'contato' => 'João Normativas',
+            'email' => 'ifal@email.com.br',
+            'url' => 'https://www2.ifal.edu.br/',
+            'sigla' => 'IBR',
+            'contato' => 'João IFAL',
             'telefone' => '(82)9999-9999',
             'responsavel_id' => '1',
             'user_id' => '1',

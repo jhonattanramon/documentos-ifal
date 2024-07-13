@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 use App\Models\Estado;
-use App\User;
+use App\Models\User;
 use App\Models\Unidade;
 use App\Models\Documento;
 use App\Models\Municipio;
