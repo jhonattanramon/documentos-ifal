@@ -16,9 +16,8 @@ class UserConselhosEstaduaisSeeder extends Seeder
      */
     public function run()
     {
-        $unidades = Unidade::whereNull('responsavel_id')
-                ->where('tipo', '=', 'Conselho')
-                ->where('esfera', '=', 'Estadual')
+        $unidades = Unidade::where('tipo', '=', 'Campus')
+                ->where('esfera', '=', 'municipal')
                 ->get();
 
         foreach($unidades as $unidade){

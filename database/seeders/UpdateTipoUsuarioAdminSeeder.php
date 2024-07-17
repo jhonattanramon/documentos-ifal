@@ -1,6 +1,7 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class UpdateTipoUsuarioAdminSeeder extends Seeder
 {
@@ -11,6 +12,6 @@ class UpdateTipoUsuarioAdminSeeder extends Seeder
      */
     public function run()
     {
-        App\User::where('tipo','administrador(a)')->update(['tipo' =>'admin']);
+        User::where('tipo','administrador(a)')->update(['tipo' =>'admin']);
     }
 }

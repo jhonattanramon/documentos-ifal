@@ -54,18 +54,20 @@ class HomeController extends Controller
     public function index(Request $request)
     { 
         try{
-            $unidade = Unidade::find(auth()->user()->unidade_id);
+            $unidade_id = auth()->user()->unidade_id;
+            $unidade = Unidade::find($unidade_id);
+            error_log("estado: ".$unidade->estado_id);
             $this->unidadeId = $unidade->id;
             $this->estadoId = $unidade->estado_id;
-
+            
             $user = auth()->user();
             $user->ultimo_acesso_em = date("Y-m-d H:i:s");
             $user->save();            
-
+            
+            // {{dd($unidade->nome);}}
             if(!$unidade->confirmado){
-
                 Log::warning('[home::redirect::unidade-edit] :: !$unidade->confirmado');
-
+                
                 return redirect()->route('unidade-edit', ['id' => $unidade->id])
                         ->with('error', 'Confirme os dados da sua unidade.');
             }

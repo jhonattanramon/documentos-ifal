@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\User;
+use App\Models\User;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Str;
 
@@ -12,7 +12,6 @@ class Unidade extends Model
 
     public const TIPO_CONSELHO = 'Conselho';
     public const TIPO_ASSESSORIA = 'Assessoria';
-
     public const ESFERA_MUNICIPAL = 'Municipal';
     public const ESFERA_ESTADUAL = 'Estadual';
     public const ESFERA_FEDERAL = 'Federal';

@@ -1,8 +1,8 @@
 <?php
-
+namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Unidade;
-use App\User;
+use App\Models\User;
 
 class AddUsersRoboUnidadesSeeder extends Seeder
 {

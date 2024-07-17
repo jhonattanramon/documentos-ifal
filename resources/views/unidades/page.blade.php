@@ -104,6 +104,7 @@
 </style>
 
 @section('content')
+
 <!-- mini-header -->
 <section id="mini-header">
     <div class="container-fluid">
@@ -131,6 +132,7 @@
     </div>
 </section>
 <!-- end mini-header -->
+
 <section id="unidade" class="mt-2">
     <div class="container-fluid">
         <div class="row">

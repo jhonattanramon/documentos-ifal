@@ -5,18 +5,17 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\TipoDocumento;
-use App\User;
 use App\Models\Assunto;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Documento;
 use App\Models\PalavraChave;
 use App\Services\DocumentoService;
-use Elasticsearch\ClientBuilder;
+use Elastic\Elasticsearch\ClientBuilder;
 
 class LoteController extends Controller
 {
      /**
-     * @var \Elasticsearch\Client
+     * @var Elastic\Elasticsearch\Client
      */
     private $client;
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -13,15 +14,15 @@ use App\Models\PalavraChave;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
-use Elasticsearch\Client;
-use Elasticsearch\ClientBuilder;
+use Elastic\Elasticsearch\Client;
+use Elastic\Elasticsearch\ClientBuilder;
 use Illuminate\Support\Facades\Log;
 
 class DocumentoController extends Controller
 {
 
     /**
-     * @var \Elasticsearch\Client
+     * @var Elastic\Elasticsearch\Client
      */
     private $client;
 
@@ -36,9 +37,6 @@ class DocumentoController extends Controller
         ];
         $this->client = ClientBuilder::create()->setHosts($hosts)->build();
     }
-
-    
-
 
     public function index(){
         $unidade = auth()->user()->unidade;
@@ -130,6 +128,7 @@ class DocumentoController extends Controller
                 $arquivoData = file_get_contents($request["arquivo"]);
                 $bodyDocumentElastic["data"] = base64_encode($arquivoData);
 
+
                 $params = [
                     'index' => 'normativas',
                     'type'  => '_doc',
@@ -158,7 +157,7 @@ class DocumentoController extends Controller
 			    ->with('error', "Insira um anexo de extensão PDF.");
             }
 
-        }catch(\Exception $e){
+        }catch(Exception $e){
 
             DB::rollBack();
             $messageErro = (getenv('APP_DEBUG') === 'true') ? $e->getMessage()." : ".$e->getTraceAsString():

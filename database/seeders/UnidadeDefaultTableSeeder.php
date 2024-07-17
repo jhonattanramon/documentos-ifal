@@ -28,6 +28,7 @@ class UnidadeDefaultTableSeeder extends Seeder
             'telefone' => '(82)9999-9999',
             'responsavel_id' => '1',
             'user_id' => '1',
+            'confirmado' => true, //debug
             'friendly_url' => 'nbr',
         ]);
 

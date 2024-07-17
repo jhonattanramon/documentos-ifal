@@ -114,7 +114,7 @@
                                         @if ($unidade->trashed()) class='danger' @endif>
                                         <td class="text-bold">{{ ($unidades->currentpage()-1) * $unidades->perpage() + $key + 1 }}</td>
                                         <td>{{ $unidade->esfera }}</td>
-                                        <td>{{ $unidade->estado['nome']}}</td>
+                                        <td>Alagoas</td>
                                         <td>{{ $unidade->municipio ? $unidade->municipio['nome'] :  'NA' }}</td>
                                         <td>
                                             <a style="cursor: pointer;" href="{{route("unidade-show",$unidade->id)}}" data-conselho-id="{{ $unidade->id }}">{{ $unidade->nome}}</a>

@@ -22,8 +22,9 @@ class UsersTableSeeder extends Seeder
 
         DB::table('users')->insert([
             'name' => 'Reitoria',
-            'email' => 'Reitoria@ifal.com.br',
+            'email' => 'reitoria@ifal.com.br',
             'tipo' => 'admin',
+            'confirmado' => true,
             'password' => bcrypt('123456')
         ]);
     }

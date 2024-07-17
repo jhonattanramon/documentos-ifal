@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 
 use App\Models\Unidade;
-use App\User;
+use App\Models\User;
 
 class UserUnidadeConselhoFederalSeeder extends Seeder
 {
