@@ -3232,8 +3232,8 @@ fieldset[disabled] .btn-success.focus {
 }
 .btn-info {
   color: #fff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #45a050;
+  border-color: #45a050;
 }
 .btn-info:focus,
 .btn-info.focus {

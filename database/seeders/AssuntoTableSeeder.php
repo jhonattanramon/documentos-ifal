@@ -14,13 +14,12 @@ class AssuntoTableSeeder extends Seeder
     public function run()
     {
         DB::table('assuntos')->delete();        
-        Assunto::create(['nome' => 'Educação Especial']);
-        Assunto::create(['nome' => 'Educação a Distância']);
-        Assunto::create(['nome' => 'Educação Profissional']);
-        Assunto::create(['nome' => 'Educação de Jovens e Adultos']);        
-        Assunto::create(['nome' => 'Educação Superior']);
-        Assunto::create(['nome' => 'Educação Básica']);
         Assunto::create(['id' => 0, 'nome' => 'Assunto Desconhecido']);
-        Assunto::create(['nome' => 'Educação Infantil']);
+        Assunto::create(['nome' => 'Ensino']);
+        Assunto::create(['nome' => 'Pesquisa']);
+        Assunto::create(['nome' => 'Extensão']);
+        Assunto::create(['nome' => 'Recursos Humanos']);        
+        Assunto::create(['nome' => 'Biblioteca']);
+        Assunto::create(['nome' => 'Monitoria e Ações Integradas']);
     }
 }

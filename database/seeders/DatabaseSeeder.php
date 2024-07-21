@@ -12,20 +12,18 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(UsersTableSeeder::class);
+        $this->call(EstadoTableSeeder::class);
         $this->call(UnidadeDefaultTableSeeder::class);
         $this->call(UnidadeConselhosEstaduaisSeeder::class);
         $this->call(UserConselhosEstaduaisSeeder::class);
         $this->call(AssuntoTableSeeder::class);
-        $this->call(EstadoTableSeeder::class);
         $this->call(TipoDocumentoTableSeeder::class);
         $this->call(UpdateTipoUsuarioAdminSeeder::class);
-        // $this->call(UserUnidadeConselhoFederalSeeder::class); a revisar se vai ser implementado
-        
-        
+        $this->call(BrasilEstadoTableSeeder::class);
+        $this->call(MunicipioTableSeeder::class);
+        $this->call(AddCapitalMunicipio::class);
+
         // $this->call(AddUsersRoboUnidadesSeeder::class);        
-        // $this->call(MunicipioTableSeeder::class);
-        // $this->call(AddCapitalMunicipio::class);
-        // $this->call(BrasilEstadoTableSeeder::class);
         // $this->call(UpdateStatusExtratorDFSeeder::class);
     }
 }

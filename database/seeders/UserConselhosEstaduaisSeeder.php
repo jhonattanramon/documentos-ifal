@@ -17,7 +17,7 @@ class UserConselhosEstaduaisSeeder extends Seeder
     public function run()
     {
         $unidades = Unidade::where('tipo', '=', 'Campus')
-                ->where('esfera', '=', 'municipal')
+                ->where('esfera', '=', 'Municipal')
                 ->get();
 
         foreach($unidades as $unidade){

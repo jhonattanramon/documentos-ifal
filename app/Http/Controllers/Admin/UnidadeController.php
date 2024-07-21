@@ -265,7 +265,7 @@ class UnidadeController extends Controller
     protected $q;
     public function search(Request $request){
         $q = $request->q;
-        $federal = Unidade::where('sigla','CNE')->first();
+        $federal = Unidade::where('sigla', '#')->first();
 
         $query = Unidade::with('estado')->whereIn('esfera',['Estadual','Municipal'])->whereNotIn('tipo',[Unidade::TIPO_ASSESSORIA]);
 
@@ -294,7 +294,6 @@ class UnidadeController extends Controller
         group by t.id, t.nome', [$unidade->id]);
 
         
-
         foreach($tiposTotal as $tipo){
             $documentos["".$tipo->id.""] = Documento::where([['unidade_id',$unidade->id],['tipo_documento_id',$tipo->id]])->orderBy('ano','desc')->paginate(25);
         }

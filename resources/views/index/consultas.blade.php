@@ -20,7 +20,7 @@
             <div class="col-lg-12 text-center">                        
                 <h1>
                     <a href="{{route('index')}}">
-                        <img src="/img/normativos-logo.png" srcset="/img/normativos-logo@2x.png 3x" alt="Normativas" />
+                        <!-- <img src="/img/normativos-logo.png" srcset="/img/normativos-logo@2x.png 3x" alt="Normativas" /> -->
                     </a>
                 </h1>
                 <h3><small class="text-muted">Termos mais pesquisados nos últimos meses</small></h3>

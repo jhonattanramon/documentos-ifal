@@ -169,9 +169,6 @@
                         <a href="{{ route('home') }}" class="btn btn-outline-secondary btn-pill btn-login m-1 mt-2">Home <i class="fa fa-user badge-info"></i></a>
                     @else
                         <a href="{{ route('login') }}" class="btn btn-outline-secondary btn-pill btn-login m-1 mt-2">Entrar <i class="fa fa-user badge-info"></i></a>
-                        <!--
-                        <a href="{{ route('register') }}">Registrar</a>
-                        -->
                     @endauth
                 @endif
             </div>
@@ -180,8 +177,9 @@
             <div class="col-lg-12 text-center">
                 <hr class="split">
                 <h1>
-                    <a href="{{route('index')}}">
-                        <img src="/img/normativos-logo.png" srcset="/img/normativos-logo@2x.png 2x" alt="Portal Normativas" />
+                    <a  href="{{route('index')}}">
+                        <!-- <img src="/img/" srcset="/img/normativos-logo@2x.png 2x" alt="Portal Normativas" /> -->
+                        <h1 style="color: gray" >Documentos <strong style="color: #189200">  IFAL </strong></h1>
                     </a>
                 </h1>
                 <hr class="split">
@@ -202,11 +200,12 @@
                         <strong>{{$erro['titulo']}}</strong>
                         <br/>
                         Notifique a administração do sistema através do email:
-                        <a href="mailto:normativas@nees.com.br?Subject=Notificação de erro" target="_top">normativas@nees.com.br</a>
+                        <a href="reitoria@ifal.com.br" target="_top">reitoria@ifal.com.br</a>
 
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
+
                     </div>
                     @if(getenv('APP_DEBUG'))
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">

@@ -3083,13 +3083,13 @@ body .btn {
 }
 
 body .btn.btn-primary {
-  background-color: #12586f;
-  border-color: #12586f;
+  background-color: #189200;
+  border-color: #189200;
 }
 
 body .btn.btn-primary:hover, body .btn.btn-primary:focus, body .btn.btn-primary.active {
-  background-color: #073848;
-  border-color: #073848;
+  background-color: #126c00;
+  border-color: #126c00;
 }
 
 body .btn.btn-login {
@@ -3147,8 +3147,8 @@ body #results .rating-container .caption {
 }
 
 body .pagination .page-item .page-link {
-  background-color: #12586f;
-  border-color: #073848;
+  background-color: #189200;
+  border-color: #116600;
   color: #ffffff;
 }
 

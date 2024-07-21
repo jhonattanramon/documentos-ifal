@@ -64,7 +64,7 @@ class HomeController extends Controller
             $user->ultimo_acesso_em = date("Y-m-d H:i:s");
             $user->save();            
             
-            // {{dd($unidade->nome);}}
+         
             if(!$unidade->confirmado){
                 Log::warning('[home::redirect::unidade-edit] :: !$unidade->confirmado');
                 
