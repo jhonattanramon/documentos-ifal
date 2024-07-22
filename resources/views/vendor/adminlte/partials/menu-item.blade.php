@@ -1,4 +1,3 @@
-{{dd($item)}}
 @if (is_string($item))
     <li class="header">{{ $item }}</li>
 @elseif (is_array($item) && isset($item['href']))

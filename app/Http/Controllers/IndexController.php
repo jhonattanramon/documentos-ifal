@@ -20,6 +20,8 @@ use App\Searches\Commands\SearchCommandA1;
 use App\Services\DocumentoQuery;
 
 
+
+
 class IndexController extends Controller
 {
     const RESULTS_PER_PAGE = 10;
@@ -68,7 +70,7 @@ class IndexController extends Controller
         }
 
         $tiposDocumento = TipoDocumento::has('documentos')->get();
-        ;
+
         $query = $request->query('query');
 
         $queryFilters = $request->query();

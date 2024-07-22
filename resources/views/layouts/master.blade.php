@@ -69,13 +69,11 @@
         <script defer="defer" src="//barra.brasil.gov.br/barra.js" type="text/javascript"></script>
         <!-- fim app  scripts -->
 
-        <footer>
-            <div class="container">
+        <footer style="height: 100vh; background-color: #45a050">
+
+            <div class="container" style="height: 100%;>
                 <div class="col-lg-12">
-                <img src="/img/logo-nees-branca.png" srcset="/img/logo-nees-branca@2x.png 2x" alt="NEES" />
-                <!--
-                <img src="/img/logo-gov.png" srcset="/img/logo-gov@2x.png 2x" alt="Governo Federal" />
-                -->
+              
                 </div>
             </div>
         </footer>

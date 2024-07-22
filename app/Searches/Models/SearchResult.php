@@ -64,7 +64,8 @@ class SearchResult
         }
 
         $this->aggResults = array();
-        if(array_key_exists( "aggregations" , $elasticAggs )){
+      
+        if(array_key_exists( "aggregations" , $this->aggResults )){
             foreach( $elasticAggs['aggregations'] as $aggKey => $aggVal){       
                 $this->aggResults[$aggKey]["labels"] = array();
                 

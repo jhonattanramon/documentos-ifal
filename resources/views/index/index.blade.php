@@ -160,7 +160,7 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-right p-0 ">
                 <a class="btn btn-mobile btn-info btn-pill m-1 mt-2 btn-sm" href="{{route('unidades-search')}}">
-                    <i class="fa fa-search"></i> Pesquisar Conselhos
+                    <i class="fa fa-search"></i> Pesquisar
                 </a>
                 <!-- <a class="btn btn-outline-secondary btn-pill btn-login m-1 mt-2" href="{{route('consultas-public')}}">Termos frequentes<i class="fa fa-search-plus"></i></a>
                 <a class="btn btn-outline-secondary btn-pill btn-login m-1 mt-2" href="{{route('downloads-public')}}">Mais baixados<i class="fa fa-download"></i></a> -->
@@ -229,7 +229,7 @@
                     </div>
                     <div class="row">
                         <div class="col text-center mt-3 mb-3">
-                            <button type="submit" class="btn btn-mobile btn-primary mr-1"><i class="fa fa-search"></i> Pesquisar normativas</button>
+                            <button type="submit" class="btn btn-mobile btn-primary mr-1"><i class="fa fa-search"></i>Pesquisar</button>
                             <button type="button" class="btn btn-mobile btn-info ml-1" data-toggle="collapse" data-target="#filters-menu" aria-expanded="false" aria-controls="collapseExample"><i class="fa fa-cogs"></i> Configurações da busca</button>
                         </div>
                     </div>

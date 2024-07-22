@@ -72,16 +72,13 @@
                         <a href="{{ route('home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Entrar</a>
-                        <!-- 
-                        <a href="{{ route('register') }}">Registrar</a>
-                        -->
                     @endauth
                 </div>
             @endif
 
             <div class="content">
                 <div class="title m-b-md">
-                    Normativas
+                    
                 </div>
             </div>
         </div>

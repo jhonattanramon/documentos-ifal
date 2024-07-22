@@ -106,11 +106,11 @@
         <div class="row">
             <div class="col-lg-8 offset-lg-2">
                 <form action="{{route('unidades-search')}}" method="GET" class="">
-                    <h3 class="text-center"><small class="text-muted">Pesquisar conselhos Federais, Estaduais e Municipais</small></h3>
+                    <h3 class="text-center"><small class="text-muted">Pesquisar Campus Municipais</small></h3>
                     <br/>
                     <div class="input-group">
                         <input type="text" name="q" id="q" class="form-control" value="{{$q}}"
-                            placeholder="Busque pela cidade ou estado, exemplo: Maceió, Alagoas, Distrito Federal..." value="" />
+                            placeholder="Busque pelos Município de Alagoas: Maceió, Rio largo, Coruripe..." value="" />
                     </div>
                     <div class="row">
                         <div class="col text-center mt-2 mb-2">
