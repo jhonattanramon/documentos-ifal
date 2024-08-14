@@ -19,9 +19,6 @@ use App\Searches\Commands\SearchCommandA1;
 
 use App\Services\DocumentoQuery;
 
-
-
-
 class IndexController extends Controller
 {
     const RESULTS_PER_PAGE = 10;

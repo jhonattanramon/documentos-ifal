@@ -30,6 +30,7 @@ class UserConselhosEstaduaisSeeder extends Seeder
                 'email' => $email,
                 'password' => $senha,
                 'unidade_id' => $unidade->id,
+                'confirmado' => true,
                 'tipo' => 'gestor'
             ]);
 

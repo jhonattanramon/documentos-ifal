@@ -14,7 +14,7 @@ class SearchResult
     public $aggResults;
 
     function __construct($elasticResult, $sizePage, $elasticAggs){
-
+       
         $hits_total = $elasticResult['hits']['total'];
         $this->totalResults = is_array( $hits_total  ) ? $hits_total ['value'] : $hits_total;
 
@@ -65,7 +65,7 @@ class SearchResult
 
         $this->aggResults = array();
       
-        if(array_key_exists( "aggregations" , $this->aggResults )){
+        if(true){
             foreach( $elasticAggs['aggregations'] as $aggKey => $aggVal){       
                 $this->aggResults[$aggKey]["labels"] = array();
                 

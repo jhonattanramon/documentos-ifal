@@ -88,10 +88,6 @@
     <div class="container-fluid">
         <div class="row mt-4">
             <div class="col-lg-2 offset-lg-1">
-                <h1>
-                    <a href="{{route('index')}}">
-                        <img class="img-fluid" src="/img/normativos-logo.png" srcset="/img/normativos-logo@2x.png 2x" alt="Portal Normativas" /></h1>
-                    </a>
             </div>
             <div class="col-lg-4"></div>
             <div class="col-lg-4 text-right">
@@ -159,11 +155,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 offset-lg-2 text-right p-0 ">
-                <a class="btn btn-mobile btn-info btn-pill m-1 mt-2 btn-sm" href="{{route('unidades-search')}}">
-                    <i class="fa fa-search"></i> Pesquisar
-                </a>
-                <!-- <a class="btn btn-outline-secondary btn-pill btn-login m-1 mt-2" href="{{route('consultas-public')}}">Termos frequentes<i class="fa fa-search-plus"></i></a>
-                <a class="btn btn-outline-secondary btn-pill btn-login m-1 mt-2" href="{{route('downloads-public')}}">Mais baixados<i class="fa fa-download"></i></a> -->
                 @if (Route::has('login'))
                     @auth
                         <a href="{{ route('home') }}" class="btn btn-outline-secondary btn-pill btn-login m-1 mt-2">Home <i class="fa fa-user badge-info"></i></a>
@@ -305,6 +296,7 @@
                             @endif
 
                             @if (isset($aggregations))
+
                                 @foreach ($aggregations['ano']['labels'] as $bucket)
                                     <a href="?query={{ $query }}&ano={{ urlencode($bucket['nome']) }}&esfera={{ $esfera  }}&fonte={{ $fonte  }}"
                                         class="btn btn-outline-secondary btn-pill btn-sm mb-2 <?php if(isset($ano)) echo "bg-secondary text-light" ?>">
@@ -387,7 +379,7 @@
                                         <strong>Tipo:</strong> {{ $doc['tipo_doc']}}
                                         @endif                                                                
                                         <br/>
-                                        <strong>Conselho:</strong>
+                                        <strong>Fonte:</strong>
                                             @if (isset($doc['fonte']['sigla']))
                                             <a href="?query={{$query}}&fonte={{ $doc['fonte']['sigla'] }}">
                                                 {{ $doc['fonte']['orgao'] }}

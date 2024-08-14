@@ -26,12 +26,9 @@ class ElasticsearchServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton(Client::class, function() {
-
-
             $hosts = [
                 env('ELASTIC_URL')
             ];
-
             return ClientBuilder::create()->setHosts($hosts)->build();
         });
     }
