@@ -10,7 +10,6 @@ use App\Models\Documento;
 
 class PDFController extends Controller
 {
-
     private $client;
 
     public function __construct()
@@ -27,7 +26,7 @@ class PDFController extends Controller
         $documento = Documento::where('arquivo', $normativaId)->first();
 
         $result = $this->client->get([
-            'index' => 'normativas',
+            'index' => 'documentos_ifal',
             'type' => '_doc',
             'id' => $normativaId
         ]);

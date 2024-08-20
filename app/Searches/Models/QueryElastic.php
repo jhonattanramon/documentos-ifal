@@ -13,7 +13,6 @@ class QueryElastic
 
     function __construct($_queryArray, $_index, $_root, $_from = 0, $_size = 5) {
         $this->queryArray = $_queryArray;
-    
         $this->index = $_index;
         $this->root = $_root;
         $this->from = $_from;

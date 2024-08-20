@@ -38,7 +38,7 @@
 
         if (navigator.share) {            
             navigator.share({
-                text: 'Acesse: ' + titulo + ' no Normativas',                
+                text: 'Acesse: ' + titulo + ' no Documentos IFAL',                
                 url: url,
             })            
             .catch((error) => {});

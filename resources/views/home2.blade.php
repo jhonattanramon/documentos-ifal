@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Normativas')
+@section('title', 'Documentos ifal')
 
 
 @section('content_header')

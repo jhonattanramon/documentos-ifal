@@ -77,7 +77,7 @@ class EnvController extends Controller
                 $arquivoData = Storage::get('uploads/'.$documento->arquivo);
                 $bodyDocumentElastic["data"] = base64_encode($arquivoData);
                 $params = [
-                    'index' => 'normativas',
+                    'index' => 'documentos_ifal',
                     'type'  => '_doc',
                     'id'    => $documento->arquivo,
                     'pipeline' => 'attachment', 

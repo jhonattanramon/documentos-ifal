@@ -46,7 +46,7 @@ class IndexController extends Controller
     }
 
     public function index(Request $request)
-    {
+    { 
         $size_page = $request->has('page_size') ? $request->query("page_size") : self::RESULTS_PER_PAGE;
 
         $tipo_doc = $request->query("tipo_doc");
@@ -69,7 +69,6 @@ class IndexController extends Controller
         $tiposDocumento = TipoDocumento::has('documentos')->get();
 
         $query = $request->query('query');
-
         $queryFilters = $request->query();
         $filters = $this->hasFilters($queryFilters);
 
@@ -99,18 +98,17 @@ class IndexController extends Controller
                     SearchComponent::logging($query, $request);
 
                 $from = (($page - 1) * $size_page);
+                    $searchCommand = new SearchCommandA1('documentos_ifal', 'ato');
+                    $result = $searchCommand->search($query, $queryFilters, $from, $size_page);
+                    $total = $result->totalResults;
+             
+                    $max_score = $result->maxScore;
+                    
+                    $total_pages = $result->totalPages;
 
-                $searchCommand = new SearchCommandA1('normativas', 'ato');
-                $result = $searchCommand->search($query, $queryFilters, $from, $size_page);
-
-                $total = $result->totalResults;
-                $max_score = $result->maxScore;
-
-                $total_pages = $result->totalPages;
-
-                $documentos = $result->documentsResult;
-                $aggregations = $result->aggResults;
-            }
+                    $documentos = $result->documentsResult;
+                    $aggregations = $result->aggResults;
+                }
 
             return view(
                 'index.index',
@@ -150,7 +148,7 @@ class IndexController extends Controller
     public function viewNormativa($normativaId)
     {
         $result = $this->client->get([
-            'index' => 'normativas',
+            'index' => 'documentos_ifal',
             'type' => '_doc',
             'id' => $normativaId
         ]);
@@ -178,7 +176,7 @@ class IndexController extends Controller
     {
 
         $params = [
-            "index" => "normativas",
+            "index" => "documentos_ifal",
             "type" => "_doc",
             "body" => [
                 "_source" => [
@@ -217,7 +215,7 @@ class IndexController extends Controller
                 $doc->delete();
 
             $params = [
-                'index' => 'normativas',
+                'index' => 'documentos_ifal',
                 'type' => '_doc',
                 'id' => $arquivoId,
             ];

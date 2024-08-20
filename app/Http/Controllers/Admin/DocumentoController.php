@@ -130,7 +130,7 @@ class DocumentoController extends Controller
 
 
                 $params = [
-                    'index' => 'normativas',
+                    'index' => 'documentos_ifal',
                     'type'  => '_doc',
                     'id'    => $documento->arquivo,
                     'pipeline' => 'attachment', 
@@ -192,7 +192,7 @@ class DocumentoController extends Controller
                 $bodyDocumentElastic["data"] = base64_encode($arquivoData);
     
                 $params = [
-                    'index' => 'normativas',
+                    'index' => 'documentos_ifal',
                     'type'  => '_doc',
                     'id'    => $documento->arquivo,
                     'pipeline' => 'attachment', 
@@ -235,7 +235,7 @@ class DocumentoController extends Controller
         $documento = Documento::find( $documentoId );
 
         $params = [
-            'index' => 'normativas',
+            'index' => 'documentos_ifal',
             'type'  => '_doc',
             'client' => [ 
                 'ignore' => 404
@@ -281,7 +281,7 @@ class DocumentoController extends Controller
             $documento->delete();
 
             $params = [
-                'index' => 'normativas',
+                'index' => 'documentos_ifal',
                 'type'  => '_doc',
                 'client' => [ 
                     'ignore' => 404
@@ -412,7 +412,7 @@ class DocumentoController extends Controller
                     $arquivoData = Storage::get('uploads/'.$documento->arquivo);
                 }elseif($documento->completed){
                     $result = $this->client->get([
-                        'index' => 'normativas',
+                        'index' => 'documentos_ifal',
                         'type' => '_doc',
                         'id' => $documento->arquivo
                     ]);
@@ -423,7 +423,7 @@ class DocumentoController extends Controller
     
             $bodyDocumentElastic["data"] = base64_encode($arquivoData);
             $params = [
-                'index' => 'normativas',
+                'index' => 'documentos_ifal',
                 'type'  => '_doc',
                 'id'    => $documento->arquivo,
                 'pipeline' => 'attachment', 
@@ -438,6 +438,5 @@ class DocumentoController extends Controller
 
     }
 
-    
 
 }

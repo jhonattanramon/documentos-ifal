@@ -64,7 +64,7 @@ class Convite extends Model
 
         Mail::send('emails.acesso', $data, function($message) use ($to_name, $to_email) {
             $message->to($to_email, $to_name)
-                ->subject('Acesso a plataforma Normativas');
+                ->subject('Acesso a plataforma documentos_ifal');
                 $message->from('normativas@nees.com.br','Normativas - NEES');
         });
     }

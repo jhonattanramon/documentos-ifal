@@ -2,12 +2,13 @@
 
 @if (!empty($query) && (!empty($documentos)))
     @section('keywords', $query)
-
 @endif
+
 @section('content')
 <!-- mini-header -->
 
 @include('admin.includes.alerts')
+
 
 @if (!empty($query) && (!empty($documentos)))
 
@@ -99,9 +100,6 @@
                         <a href="{{ route('home') }}" class="btn btn-outline-secondary btn-pill btn-login m-1 mt-2">Home <i class="fa fa-user badge-info"></i></a>
                     @else
                         <a href="{{ route('login') }}" class="btn btn-outline-secondary btn-pill btn-login m-1 mt-2">Entrar <i class="fa fa-user badge-info"></i></a>
-                        <!--
-                        <a href="{{ route('register') }}">Registrar</a>
-                        -->
                     @endauth
                 @endif
             </div>

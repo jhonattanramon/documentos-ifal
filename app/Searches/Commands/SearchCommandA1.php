@@ -40,10 +40,10 @@ class SearchCommandA1 implements ISearchCommand
    
     public function search($query, $filters, $from, $sizePage){
 
-        $this->addBoolShouldExpressions($query);
-        $this->addBoolFilterExpressions($filters);
-
-        $queryElastic = new QueryElastic(
+            $this->addBoolShouldExpressions($query);
+            $this->addBoolFilterExpressions($filters);
+            
+            $queryElastic = new QueryElastic(
                 $this->queryBuilder->getQueryArray(), 
                 $this->index,
                 $this->root,
@@ -51,15 +51,16 @@ class SearchCommandA1 implements ISearchCommand
                 $sizePage
         );
 
+        
         $elasticResult = $this->clientElastic->search($queryElastic->get());
-
+        
         $aggs = $this->clientElastic->search($queryElastic->agg());
 
         $result = new SearchResult($elasticResult, $sizePage, $aggs);
-
-
+            
+        
         return $result;
-
+        
     }
 
     private function checkHasFilter($filter, $arrayFilters){

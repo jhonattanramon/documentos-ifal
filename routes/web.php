@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\UnidadeController;
 use App\Http\Controllers\Admin\UnidadeConvitesController;
 use App\Http\Controllers\Admin\UsuarioController;
 use App\Http\Controllers\Auth\PrimeiroAcessoController;
+use App\Http\Controllers\PDFController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -52,18 +53,22 @@ Route::get('/conselhos', [UnidadeController::class, 'search'])->name('unidades-s
 // Route::get('/conselhos/{url}', 'Admin\UnidadeController@page')->name('unidades-page');
 Route::get('/conselhos/{url}', [UnidadeController::class, 'page'])->name('unidades-page');
 Route::get('/login', [LoginController::class, 'login']);
-Route::match('get', '/normativa/pdf/{normativaId}', [
-    'uses' => 'PDFController@pdfNormativa',
-    'as' => 'pdfNormativa',
-]);
-Route::match('get', '/normativa/view/{normativaId}', [
-    'uses' => 'IndexController@viewNormativa',
-    'as' => 'viewNormativa',
-]);
-Route::match('get', '/filter', [
-    'uses' => 'IndexController@filter',
-    'as' => 'filterNormativa',
-]);
+Route::get('/normativa/pdf/{normativaId}', [PDFController::class, 'pdfNormativa'])->name('pdfNormativa');
+// Route::match('get', '/normativa/pdf/{normativaId}', [
+//     'uses' => [PDFController::class, "pdfNormativa"],
+//     'as' => 'pdfNormativa',
+// ]);
+Route::get('/normativa/view/{normativaId}', [IndexController::class, 'viewNormativa'])->name('viewNormativa');
+// Route::match('get', '/normativa/view/{normativaId}', [
+//     'uses' => 'IndexController@viewNormativa',
+//     'as' => 'viewNormativa',
+// ]);
+
+Route::get('/filter', [IndexController::class, 'filter'])->name('filterNormativa');
+// Route::match('get', '/filter', [
+//     'uses' => 'IndexController@filter',
+//     'as' => 'filterNormativa',
+// ]);
 // Route::get('documento/delete/{arquivoId}', 'IndexController@delete')->name('delete-elastic');
 Route::get('documentos/delete/{arquivoId}', [IndexController::class, 'delete'])->name('delete-elastic');
 Route::get('errors/500', function () {
@@ -161,6 +166,8 @@ Route::prefix('admin')->middleware('auth')->namespace('Admin')->group(function()
     Route::get('documentos/publicar', [DocumentoController::class, 'create'])->name('publicar');
     // Route::post('documentos/publicar', 'DocumentoController@store')->name('enviar');
     Route::post('documentos/publicar', [DocumentoController::class, 'store'])->name('enviar');
+
+  
 
     // Route::get('documentos/publicar-lote', 'LoteController@create')->name('publicar-lote');
     Route::get('documentos/publicar-lote', [LoteController::class, 'create'])->name('publicar-lote');

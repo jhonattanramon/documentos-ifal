@@ -36,7 +36,7 @@ class ElasticController extends Controller
 
         $params = [
                 
-            'index' => 'normativas',
+            'index' => 'documentos_ifal',
             'type' => '_doc',
             'body' => [
                 'size' => 25,

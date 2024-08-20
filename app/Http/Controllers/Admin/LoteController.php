@@ -152,7 +152,7 @@ class LoteController extends Controller
         //dd($bodyDocumentElastic);
 
         $params = [
-            'index' => 'normativas',
+            'index' => 'documentos_ifal',
             'type'  => '_doc',
             'id'    => $documento->arquivo,
             'pipeline' => 'attachment', 

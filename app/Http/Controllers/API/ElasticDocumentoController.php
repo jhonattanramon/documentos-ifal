@@ -7,15 +7,15 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Support\Facades\Storage;
 
-use Elasticsearch\Client;
-use Elasticsearch\ClientBuilder;
+use Elastic\Elasticsearch\Client;
+use Elastic\Elasticsearch\ClientBuilder;
 use App\Models\Documento;
 use Illuminate\Support\Facades\Log;
 
 class ElasticDocumentoController extends Controller
 {
     /**
-     * @var \Elasticsearch\Client
+     * @var \Elastic\Elasticsearch\Client
      */
     private $client;
 
@@ -39,7 +39,7 @@ class ElasticDocumentoController extends Controller
                 $bodyDocumentElastic["data"] = base64_encode($arquivoData);
     
                 $params = [
-                    'index' => 'normativas',
+                    'index' => 'documentos_ifal',
                     'type'  => '_doc',
                     'id'    => $documento->arquivo,
                     'pipeline' => 'attachment', 
