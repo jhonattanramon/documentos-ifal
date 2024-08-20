@@ -32,6 +32,9 @@
 
 # configurando elastic 
 - garanta que voce tem elasticsearch 8.14 instalado na sua maquina ( https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html ). 
+
+-Não é preciso a instalação do plugin `Ingest Attachment plugin`, o elasticsearch 8.14 já contem o plugin incluido, [mais informações](https://www.elastic.co/guide/en/elasticsearch/plugins/current/ingest-attachment.html). .
+
 ### Desabilitar o Certificado SSL do Elasticsearch
 
 Após a instalação, você precisará desabilitar o certificado SSL do Elasticsearch. Siga os passos abaixo:
