@@ -16,6 +16,19 @@
 
 3. confimando a instação do composer, abra o projeto e execute os comandos: `composer install` e `composer update`
 
+### instalando o postgresql 
+
+1. para instalar o postgresql em um ambiente linux/ubuntu rode o comando `sudo apt install postgresql`,
+
+2. logo após roda os comandos `sudo apt install -y postgresql-common
+sudo /usr/share/postgresql-common/pgdg/apt.postgresql.org.sh`
+
+- se a instação do postgres pelo APT der errado tente instalar munualmente seguindo os [passos do site](https://www.postgresql.org/download/linux/ubuntu/).
+
+3. com o postgresql instalado, é hora de instalar o PGadmin, que vai fornecer uma interface grafica para gerenciar o banco, se utilze o [passo a passo](https://www.pgadmin.org/download/pgadmin-4-apt/) do site para isso.
+
+
+
 ### Configuração do Ambiente e Banco de Dados
 
 1. Renomeie o arquivo `.env.example` para `.env`:
