@@ -162,7 +162,7 @@
                                         <i class="fa fa-edit fa-3x" ></i>
                                     </a>
                                     @if ($doc->isIndexado())
-                                        <a href="/normativa/view/{{ $doc['arquivo'] }}" target="_blank" title="Abrir no portal Normativas">
+                                        <a href="/normativa/view/{{ $doc['arquivo'] }}" target="_blank" title="Abrir no Documentos IFAL">
                                             <i class="fa fa-external-link"></i>
                                         </a>
                                 
@@ -233,7 +233,7 @@
                                 </td>
                                 <td>
                                     @if ($doc->isIndexado())
-                                        <a href="/normativa/view/{{ $doc['arquivo'] }}" target="_blank" title="Abrir no portal Normativas">
+                                        <a href="/normativa/view/{{ $doc['arquivo'] }}" target="_blank" title="Abrir no Documentos IFAL">
                                             <i class="fa fa-external-link"></i>
                                         </a>
                                 

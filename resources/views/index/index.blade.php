@@ -167,7 +167,7 @@
                 <hr class="split">
                 <h1>
                     <a  href="{{route('index')}}">
-                        <!-- <img src="/img/" srcset="/img/normativos-logo@2x.png 2x" alt="Portal Normativas" /> -->
+                        <!-- <img src="/img/" srcset="/img/normativos-logo@2x.png 2x" alt="Documentos IFAL" /> -->
                         <h1 style="color: gray" >Documentos <strong style="color: #189200">  IFAL </strong></h1>
                     </a>
                 </h1>

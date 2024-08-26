@@ -1,6 +1,21 @@
 
 # Documentos IFAL
 
+### instalando o PHP;
+
+1. use o comando `sudo apt install php8.2 -y`, para instalar o php na versão 8.2.
+
+2. verifique o a instalação com o comando `php -v`, se no seu terminal não mostrar informações da versão do php, veja o tutotial de instação [aqui](https://tilsonmat.medium.com/como-instalar-o-php8-2-na-sua-maquina-93ea127aac7f#:~:text=Instala%C3%A7%C3%A3o,dar%20sim%20e%20instalar%20logo).
+
+
+### instalando o Composer;
+
+1. composer é um gerenciador de dependencias para um ambiente PHP, siga os passos do [site oficial](https://getcomposer.org/download/) para instalar o composer.
+
+2. cheque a instalação do composer com o comando `composer --version`, se as informações do composer não aparecer em seu terminal, repita os passos do site.
+
+3. confimando a instação do composer, abra o projeto e execute os comandos: `composer install` e `composer update`
+
 ### Configuração do Ambiente e Banco de Dados
 
 1. Renomeie o arquivo `.env.example` para `.env`:
@@ -22,12 +37,15 @@
     ```bash
     php artisan migrate
     ```
+    - na necessidade de refazer o migrate, voce pode forçar o migrate apagando as tabelas e criando novamente, com o comando `php artisan migrate:fresh` 
 
 5. Execute o comando de seed para o banco de dados:
 
     ```bash
     php artisan db:seed
     ```
+
+
 
 
 # configurando elastic 
